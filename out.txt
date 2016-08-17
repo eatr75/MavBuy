@@ -1,0 +1,310 @@
+//start the menu
+
+1) List Employees.
+2) List Clients In a State.
+3) List Portfolio Of A Client.
+4) Release An Employee.
+5) Display Items For Sale.
+6) Display Customer Deatails.
+7) Buy An Item for Customer.
+0) Exit.
+/*menu_no,Customer_id,item_id,date,quantity,store_id
+
+Client: #111 
+	Bought: f6-n231dx (2) 
+	At Store: #4 
+	Date of Purchase: [6-30-2013] 
+	Total Price: 1055.34
+Client: 111 null      null    bought 2 of item f6-n231dx       for $1055.34 on [6-30-2013]  at store #4    with shipping cost: 0.00
+
+Client: #111 
+	Bought: MD101LL/A (4) 
+	At Store: #9 
+	Date of Purchase: [5-31-2016] 
+	Total Price: 4054.56
+Client: 111 null      null    bought 4 of item MD101LL/A       for $4054.56 on [5-31-2016]  at store #9    with shipping cost: 0.00
+
+Client: #111 
+	Bought: 6573D003 (3) 
+	At Store: #1 
+	Date of Purchase: [9-21-2013] 
+	Total Price: 2036.97
+Client: 111 null      null    bought 3 of item 6573D003        for $2036.97 on [9-21-2013]  at store #1    with shipping cost: 0.00
+
+Client: #111 
+	Bought: SMG900VZWV (1) 
+	At Store: #3 
+	Date of Purchase: [10-2-2014] 
+	Total Price: 145.49
+Client: 111 null      null    bought 1 of item SMG900VZWV      for $145.49  on [10-2-2014]  at store #3    with shipping cost: 0.00
+
+Client: #222 
+	Bought: 1920 (1) 
+	At Store: #6 
+	Date of Purchase: [2-28-2014] 
+	Total Price: 174.59
+Client: 222 null      null    bought 1 of item 1920            for $174.59  on [2-28-2014]  at store #6    with shipping cost: 0.00
+
+Client: #113 
+	Bought: ZX35 (2) 
+	At Store: #4 
+	Date of Purchase: [4-22-2013] 
+	Total Price: 189.38
+Client: 113 null      null    bought 2 of item ZX35            for $189.38  on [4-22-2013]  at store #4    with shipping cost: 0.00
+
+Client: #112 
+	Bought: SMG900VZWV (3) 
+	At Store: #8 
+	Date of Purchase: [9-23-2014] 
+	Total Price: 436.47
+Client: 112 null      null    bought 3 of item SMG900VZWV      for $436.47  on [9-23-2014]  at store #8    with shipping cost: 0.00
+
+Client: #112 
+	Bought: AG-HPX170 (1) 
+	At Store: #10 
+	Date of Purchase: [5-31-2016] 
+	Total Price: 3394.03
+Client: 112 null      null    bought 1 of item AG-HPX170       for $3394.03 on [5-31-2016]  at store #10   with shipping cost: 0.00
+
+Client: #445 
+	Bought: 6573D003 (8) 
+	At Store: #7 
+	Date of Purchase: [8-23-2013] 
+	Total Price: 5599.92
+Client: 445 null      null    bought 8 of item 6573D003        for $5599.92 on [8-23-2013]  at store #7    with shipping cost: 0.00
+
+Client: #445 
+	Bought: G850GM (2) 
+	At Store: #2 
+	Date of Purchase: [7-23-2013] 
+	Total Price: 2599.98
+Client: 445 null      null    bought 2 of item G850GM          for $2599.98 on [7-23-2013]  at store #2    with shipping cost: 0.00
+
+Client: #445 
+	Bought: MD101LL/A (1) 
+	At Store: #6 
+	Date of Purchase: [9-18-2014] 
+	Total Price: 1044.99
+Client: 445 null      null    bought 1 of item MD101LL/A       for $1044.99 on [9-18-2014]  at store #6    with shipping cost: 0.00
+Item Is Not Prepared
+Client: 112 null      null    bought 3 of item NEXUS5 ASUS-3B42 for $611.07  on [3-19-2013]  at store #5    with shipping cost: 0.00
+/*
+Listing item bought by 111 in 2013
+2 quantity of f6-n231dxfor 1055.34on [6-30-2013]
+2 quantity of f6-n231dxfor 1055.34on [6-30-2013]
+4 quantity of MD101LL/Afor 4054.56on [5-31-2016]
+4 quantity of MD101LL/Afor 4054.56on [5-31-2016]
+3 quantity of 6573D003for 2036.97on [9-21-2013]
+3 quantity of 6573D003for 2036.97on [9-21-2013]
+1 quantity of SMG900VZWVfor 145.49on [10-2-2014]
+1 quantity of SMG900VZWVfor 145.49on [10-2-2014]
+Listing item bought by 112 in 2014
+3 quantity of SMG900VZWVfor 436.47on [9-23-2014]
+3 quantity of SMG900VZWVfor 436.47on [9-23-2014]
+1 quantity of AG-HPX170for 3394.03on [5-31-2016]
+1 quantity of AG-HPX170for 3394.03on [5-31-2016]
+3 quantity of NEXUS5 ASUS-3B42for 611.07on [3-19-2013]
+Listing item bought by 111in all years
+2 quantity of f6-n231dxfor 1055.34on [6-30-2013]
+2 quantity of f6-n231dxfor 1055.34on [6-30-2013]
+4 quantity of MD101LL/Afor 4054.56on [5-31-2016]
+4 quantity of MD101LL/Afor 4054.56on [5-31-2016]
+3 quantity of 6573D003for 2036.97on [9-21-2013]
+3 quantity of 6573D003for 2036.97on [9-21-2013]
+1 quantity of SMG900VZWVfor 145.49on [10-2-2014]
+1 quantity of SMG900VZWVfor 145.49on [10-2-2014]
+Listing item bought by 445in all years
+8 quantity of 6573D003for 5599.92on [8-23-2013]
+8 quantity of 6573D003for 5599.92on [8-23-2013]
+2 quantity of G850GMfor 2599.98on [7-23-2013]
+2 quantity of G850GMfor 2599.98on [7-23-2013]
+1 quantity of MD101LL/Afor 1044.99on [9-18-2014]
+1 quantity of MD101LL/Afor 1044.99on [9-18-2014]
+Listing item bought by 222 in 2014
+1 quantity of 1920for 174.59on [2-28-2014]
+1 quantity of 1920for 174.59on [2-28-2014]
+Listing item bought by 112 in 2013
+3 quantity of SMG900VZWVfor 436.47on [9-23-2014]
+3 quantity of SMG900VZWVfor 436.47on [9-23-2014]
+1 quantity of AG-HPX170for 3394.03on [5-31-2016]
+1 quantity of AG-HPX170for 3394.03on [5-31-2016]
+3 quantity of NEXUS5 ASUS-3B42for 611.07on [3-19-2013]
+/*
+Hired Agent John Hopkins on [2-26-2013]andd given him/her employee Id6
+Hired Accountant Jason Davis on [2-25-2012]andd given him/her employee Id7
+Hired WebDesigner Mariana Struts on [2-25-2012]andd given him/her employee Id8
+Hired WebDesigner Kate Wayne on [4-23-2014]andd given him/her employee Id9
+Hired Accountant Nicholas Spark on [1-1-2011]andd given him/her employee Id10
+Hired Agent Scarlett Weasley on [2-21-2012]andd given him/her employee Id11
+/*
+Relesase Employee james bond
+Relesase Employee John hopkins
+Not Valid Employee ID  13
+/*
+Month Salary for john smith is $ 705.0
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+Month Salary for Kate Wayne is $ 760.0
+NOT valid
+NOT valid
+NOT valid
+Month Salary for anne haathaway is $ 1762.5
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+Month Salary for Jason Davis is $ 1950.5
+NOT valid
+NOT valid
+NOT valid
+NOT valid
+/*
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+4 quantity of MD101LL/Afor 4054.56on [5-31-2016]
+4 quantity of MD101LL/Afor 4054.56on [5-31-2016]
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+1 quantity of MD101LL/Afor 1044.99on [9-18-2014]
+1 quantity of MD101LL/Afor 1044.99on [9-18-2014]
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+1 quantity of AG-HPX170for 3394.03on [5-31-2016]
+1 quantity of AG-HPX170for 3394.03on [5-31-2016]
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+2 quantity of f6-n231dxfor 1055.34on [6-30-2013]
+2 quantity of f6-n231dxfor 1055.34on [6-30-2013]
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+3 quantity of 6573D003for 2036.97on [9-21-2013]
+3 quantity of 6573D003for 2036.97on [9-21-2013]
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+8 quantity of 6573D003for 5599.92on [8-23-2013]
+8 quantity of 6573D003for 5599.92on [8-23-2013]
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+This Item ID is NOT valid
+/*
+Status of Client 111 is GOLD
+Status of Client 111 is GOLD
+Status of Client 111 is GOLD
+Status of Client 112 is Regular
+/*
